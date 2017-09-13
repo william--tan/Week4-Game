@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RPG Game</title>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  	<link href="https://fonts.googleapis.com/css?family=Amiko|Rasa" rel="stylesheet">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.js"></script>
+  	  <link rel="stylesheet" href="animate.css">
+</head>
+<body>
+
+<div class="container pickcharacter">
+	<div class="jumbotron jumbotron-fluid">
+		<h1 class="display-3 text-center"> Pick a Character</h1>
+		<br>
+		<div class="card-deck">
+			<div class="card ccard" value='0'>
+				<img src="images/chocobo.jpg" alt="chocobo" class="card-img img-responsive">
+				<div class="card-body text-center">
+      				<h4 class="card-title"></h4>
+    			</div>
+    			<div class="card-footer text-center">
+    				<p class="card-text"></p>
+    			</div>
+			</div>
+			<div class="card ccard" value='1'>
+				<img src="images/moogle.jpg" alt="moogle" class="card-img img-responsive">
+				<div class="card-body text-center">
+      				<h4 class="card-title"></h4>
+    			</div>
+    			<div class="card-footer text-center">
+    				<p class="card-text"></p>
+    			</div>
+			</div>
+			<div class="card ccard" value='2'>
+				<img src="images/cactuar.jpg" alt="cactuar" class="card-img img-responsive">
+				<div class="card-body text-center">
+      				<h4 class="card-title"></h4>
+    			</div>
+    			<div class="card-footer text-center">
+    				<p class="card-text"></p>
+
+    			</div>
+			</div>
+			<div class="card ccard" value='3'> 
+				<img src="images/tonberry.jpg" alt="tonberry" class="card-img img-responsive">
+				<div class="card-body text-center">
+      				<h4 class="card-title"></h4>
+    			</div>
+    			<div class="card-footer text-center">
+    				<p class="card-text"></p>
+    			</div>
+			</div>
+		</div>
+		<div class="card-deck attackdeck">
+			<div class="card cardatk" value='0'></div>
+			<div class="card cardatk" value='1'></div>
+			<div class="card cardatk" value='2'></div>
+			<div class="card cardatk" value='3'></div>
+		</div>
+	</div>
+</div>
+<div class="bg"></div>
+
+<!-- <div id="characterList"></div>
+<div id="display"></div>
+<button id="attackBtn"> ATTACK </button> -->
+
+<style>
+
+.attackdeck{
+	visibility: hidden;
+}
+
+.cardatk{
+	margin-top: 20px;
+	border: none;
+	filter: none;
+	font-family: 'Amiko';
+}
+
+body{
+	background-image: url(images/bg.jpg);
+	background-size: cover;
+}
+
+
+h1{
+	font-family: 'Amiko', sans-serif;
+}
+
+.card-title{
+	font-family: 'Amiko', sans-serif;
+}
+
+.card-text{
+	font-family: 'Amiko', sans-serif;
+}
+
+.card-deck{
+	margin: 0 10px 0 10px;
+}
+
+.pickcharacter{
+	margin: 100px auto 0 auto;
+
+}
+
+.card > img{
+	opacity: 0.8;
+	filter: grayscale(50%);
+	transition: 0.2s;
+}
+
+.card > img:hover{
+	opacity: 1;
+	filter: grayscale(0%);
+	transition: 0.2s;
+}
+
+.card:hover{
+	filter:drop-shadow(0px 0px 10px #cdd2d8);
+	transition: 0.2s;
+}
+
+.card{
+	transition: 0.2s;
+}
+
+.card > img:active{
+	opacity: 1;
+	filter: grayscale(0%);
+	filter: brightness(90%);
+	transition: 0.5s;
+}
+
+.card-footer{
+	margin-top: -15px;
+	font-size: 0.8em;
+}
+
+</style>
+
+<script src="code.js"></script>
+</body>
+</html>
