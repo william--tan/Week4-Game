@@ -62,7 +62,7 @@ var rpg = {
 		{
 			rpg.characters[rpg.chosenEnemy].hp -= rpg.characters[rpg.chosenCharacter].ap; //decrease enemy hp
 			//rpg.chosenCharacter.ap *= 1.2; //double attack point of char
-			rpg.characters[rpg.chosenCharacter].ap = Math.floor(rpg.characters[rpg.chosenCharacter].ap*1.5);
+			rpg.characters[rpg.chosenCharacter].ap = Math.floor(rpg.characters[rpg.chosenCharacter].ap*1.2);
 			//rpg.characters[rpg.chosenCharacter].ap *= 2;
 			if (rpg.characters[rpg.chosenEnemy].hp <= 0)
 			{
@@ -73,7 +73,7 @@ var rpg = {
 			{
 				//decrease char hp
 				rpg.characters[rpg.chosenCharacter].hp -= rpg.characters[rpg.chosenEnemy].ap;
-				rpg.characters[rpg.chosenEnemy].ap =  Math.floor(rpg.characters[rpg.chosenEnemy].ap*1.2);
+				rpg.characters[rpg.chosenEnemy].ap =  Math.floor(rpg.characters[rpg.chosenEnemy].ap*(1.2+parseInt(rpg.beatenEnemy.length)));
 			
 				if (rpg.characters[rpg.chosenCharacter].hp <= 0)
 					rpg.gameState = 4;
@@ -196,8 +196,7 @@ $(".card").on('click', function(){
 		rpg.gameState = 1;
 		rpg.display();
 	}
-	//if you haven't chosen an enemy to battle
-	else if (rpg.chosenEnemy == null && rpg.gameState == 1 && $(this).attr("value") != rpg.chosenCharacter)
+	else if (rpg.chosenEnemy == null && rpg.gameState == 1 && $(this).attr("value") != rpg.chosenCharacter && rpg.beatenEnemy.indexOf($(this).attr("value")) == -1)
 	{
 		rpg.chosenEnemy = $(this).attr("value");
 		rpg.gameState = 2;
